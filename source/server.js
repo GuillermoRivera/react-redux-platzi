@@ -13,4 +13,7 @@ function requestHandler (req, res) {
 }
 
 const server = http.createServer(requestHandler)
+
 server.listen(port)
+
+console.log(`Server listening at port ${port}`)
