@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "React project from React and redux Platzi course",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    
+  },
   "keywords": [],
   "author": "Juan Guillermo Rivera Orozco <guillerivera32@gmail.com",
   "license": "MIT",
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
