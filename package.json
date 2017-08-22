@@ -8,6 +8,9 @@
   "author": "Juan Guillermo Rivera Orozco <guillerivera32@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

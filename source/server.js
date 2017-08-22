@@ -4,7 +4,7 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 
 import Pages from './pages/containers/Page.jsx'
-//import Layout from './pages/components/Layout.jsx'
+import Layout from './pages/components/Layout.jsx'
 
 
 const port = 3000
@@ -27,7 +27,14 @@ function requestHandler (req, res) {
     res.end()
   }
 
-  res.write(html) // Escribir en la respuesta el HTML
+  res.write(
+    renderToStaticMarkup(
+      <Layout 
+        title="Application"
+        content={html}
+      />
+    )
+  )
   res.end() // Finaliza la respuesta
 }
 
