@@ -1719,6 +1719,10 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
+list@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/list/-/list-1.0.0.tgz#074a893684727d9ea5edb25b0a3ef5ee2190a156"
+
 load-json-file@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"

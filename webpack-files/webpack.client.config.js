@@ -4,7 +4,7 @@ module.exports = {
   entry: './source/client.js',
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, '../build/statics')
+    path: path.resolve(__dirname, '../build/statics' )
   },
   module: {
     loaders: [
@@ -13,7 +13,7 @@ module.exports = {
         loader: 'json-loader'
       },
       {
-        test: /\.jsx?/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /(node_modules)/,
         query: {
@@ -23,5 +23,5 @@ module.exports = {
       }
     ]
   },
-  target: 'node'
+  target: 'web'
 }

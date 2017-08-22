@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "React project from React and redux Platzi course",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "bff": "node build/server/index.js",
+    "sfs": "serve build/statics/ --port 3001 --cache 0"
+  },
   "keywords": [],
   "author": "Juan Guillermo Rivera Orozco <guillerivera32@gmail.com",
   "license": "MIT",
@@ -22,6 +25,7 @@
     "babel-preset-latest-minimal": "^1.1.2",
     "babel-preset-react": "^6.24.1",
     "json-loader": "^0.5.7",
+    "list": "^1.0.0",
     "webpack": "^3.5.5"
   }
 }
