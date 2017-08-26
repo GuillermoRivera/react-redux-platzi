@@ -1,49 +1,50 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import api from '../../api.js'
 
 class Post extends Component {
-  constructor (props) {
-    super (props)
+  constructor(props) {
+    super(props)
 
     this.state = {
       loading: true,
-      user: {},
+      user: props.user || null,
       comments: []
     }
   }
 
-  async componentDidMount () {
+  async componentDidMount() {
     const [
       user,
       comments
     ] = await Promise.all([
-      api.users.getSingle(this.props.userId),
+      !this.state.user ? api.users.getSingle(this.props.userId) : Promise.resolve(null),
       api.posts.getComments(this.props.id)
     ])
 
     this.setState({
       loading: false,
-      user,
+      user: user || this.state.user,
       comments
     })
 
   }
 
-  render () {
-    return(
+  render() {
+    return (
       <article id={`post-${this.props.id}`}>
         <h2>{this.props.title}</h2>
         <p>{this.props.body}</p>
         {!this.state.loading && (
           <div>
-            <a href="{`//${this.state.user.website`}" target="_blank" rel="nofollow">
-              {this.state.user.name} 
-              <span>
-                 There are {this.state.comments.length} comments
-              </span>
-            </a>
+            <Link to={`/user/${this.state.user.id}`}>
+              {this.state.user.name}
+            </Link>
+            <span>
+              There are {this.state.comments.length} comments
+            </span>
           </div>
         )}
       </article>

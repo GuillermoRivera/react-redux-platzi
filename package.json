@@ -4,7 +4,7 @@
   "description": "React project from React and redux Platzi course",
   "main": "index.js",
   "scripts": {
-    "bff": "node build/server/index.js",
+    "bff": "supervisor build/server/index.js",
     "sfs": "serve build/statics/ --port 3001 --cache 0"
   },
   "keywords": [],
