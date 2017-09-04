@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import api from '../../api.js'
+
 import Post from '../../posts/containers/Post.jsx'
 import Loading from '../../shared/components/Loading.jsx'
+
+import styles from './Page.css'
 
 class Home extends Component {
   constructor (props) {
@@ -63,9 +66,9 @@ class Home extends Component {
 
   render() {
     return (
-      <section name="Home">
+      <section name="Home" className={styles.section}>
         <h1>Home</h1>
-        <section>
+        <section className={styles.list}>
           {
             this.state.posts
               .map(post => <Post key={post.id} {...post} />)
